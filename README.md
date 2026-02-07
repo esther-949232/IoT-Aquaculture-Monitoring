@@ -9,7 +9,7 @@ In the aquaculture industry, post-harvest losses due to spoilage and illegal adu
 * **Connectivity Layer (Gateway):** NodeMCU ESP8266 receives processed data via Serial communication and transmits it to the cloud via Wi-Fi.
 * **Application Layer (Cloud):** Blynk IoT platform visualizes data and manages the Alert Engine.
 
-![Architecture Diagram](architecture_diagram.png)
+![Architecture Diagram](architecture_diagram.jpg.jpeg)
 
 
 ## [cite_start]3. Sensor List & Justification [cite: 3816-3829]
