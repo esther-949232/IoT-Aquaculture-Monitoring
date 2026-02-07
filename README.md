@@ -4,7 +4,7 @@
 In the aquaculture industry, post-harvest losses due to spoilage and illegal adulteration (using Formalin) are major economic challenges. Traditional methods of checking fish freshness are subjective and slow. This project designs an IoT monitoring solution that monitors **Ammonia (Nitrogen)** and **Formaldehyde** levels in real-time to trigger alerts before spoilage occurs.
 
 ## 2. System Architecture
-[cite_start]The system follows a 3-layer IoT architecture:
+The system follows a 3-layer IoT architecture:
 * **Sensing Layer (Edge):** Arduino Uno R3 connected to MQ-137 (Ammonia), Grove HCHO (Formaldehyde), and DHT22 sensors. It processes raw analog signals into PPM values locally.
 * **Connectivity Layer (Gateway):** NodeMCU ESP8266 receives processed data via Serial communication and transmits it to the cloud via Wi-Fi.
 * **Application Layer (Cloud):** Blynk IoT platform visualizes data and manages the Alert Engine.
@@ -12,7 +12,7 @@ In the aquaculture industry, post-harvest losses due to spoilage and illegal adu
 ![Architecture Diagram](architecture_diagram.jpg.jpeg)
 
 
-## [cite_start]3. Sensor List & Justification [cite: 3816-3829]
+## 3. Sensor List & Justification
 | Sensor | Purpose | Justification |
 | :--- | :--- | :--- |
 | **MQ-137** | Ammonia (NH3) Detection | Detects volatile nitrogen (TVB-N) released during protein breakdown. Spoilage threshold set at >320 ppm. |
@@ -29,5 +29,21 @@ In the aquaculture industry, post-harvest losses due to spoilage and illegal adu
     * **Action:** Trigger `Blynk.logEvent("spoilage_alert")`.
     * **Result:** Trader receives an automated email: "High nitrogen levels detected. Immediate action needed."
 
-## 5. Sample Output
-![Dashboard Alert](dashboard_alert.png)
+## 5. Project Demo Video
+https://github.com/user-attachments/assets/ee2d9609-0d87-4056-8e8c-b813ee3e88c5
+
+## 6. Sample Output
+<table>
+  <tr>
+    <td align="center">
+      <img src="Blynk_Iot_Alert.jpg.jpeg" width="300" />
+      <br />
+      <b>Fig 1: Blynk IoT Alert</b>
+    </td>
+    <td align="center">
+      <img src="Mail_Alert.jpg.jpeg" width="300" />
+      <br />
+      <b>Fig 2: Automated Email Alert</b>
+    </td>
+  </tr>
+</table>
